@@ -1,0 +1,92 @@
+.beach-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between cards */
+    padding: 20px; /* Padding around the container */
+    overflow: visible; /* Ensure cards are not cut off */
+    box-sizing: border-box; /* Include padding in width calculation */
+    height: 50%;
+    left: 0px;
+    align-items: stretch;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  
+  .card {
+    color: #1b0f37;
+    border-radius: 10px;
+    background-color: #48A9A6;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transform: rotate(calc(-5deg + 10deg * var(--random-tilt)));
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 5% 0%; /* Add horizontal margin */
+    box-sizing: border-box; /* Include padding and border in width */
+  }
+  
+  
+  .card:hover {
+    transform: rotate(0deg);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card h3 {
+    margin: 0;
+    font-size: 1.2em;
+  }
+  
+  .card h1{
+    font-size: clamp(1.5em, 5vw, 3.5em); /* Adjust the values as needed */
+  }
+
+  .card p {
+    margin: 10px 0 0;
+    font-size: 0.9em;
+  }
+  
+  /* Add unique tilts for each card */
+  .card-0 {
+    --random-tilt: -1;
+  }
+  .card-1 {
+    --random-tilt: 0.5;
+  }
+  .card-2 {
+    --random-tilt: 1.5;
+  }
+
+  .card:hover {
+    animation: wobble 0.3s ease-out;
+  }
+  
+  @keyframes wobble {
+    0% {
+      transform: rotate(-2deg);
+    }
+    50% {
+      transform: rotate(2deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+
+  /* Media query for smaller screens */
+@media (max-width: 768px) {
+  .beach-container {
+    flex-direction: column; /* Stack cards vertically */
+    align-items: center; /* Center the cards */
+    height: auto;
+    justify-content: center;
+  }
+
+  .card {
+    width: 100%; /* Make each card take the full width */
+    margin: 10px 0; /* Add vertical spacing between stacked cards */
+  }
+}
