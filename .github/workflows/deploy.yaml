@@ -8,6 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          persist-credentials: true # Ensure credentials persist for further Git commands
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
@@ -24,6 +26,5 @@ jobs:
 
       - name: Build and Deploy
         env:
-          GIT_USER: github-actions[bot]
-          GIT_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npm run deploy
