@@ -6,6 +6,9 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write # Required for pushing to the repository
+      actions: read # Allows reading actions (optional, but may be helpful)
     steps:
       - uses: actions/checkout@v4
         with:
