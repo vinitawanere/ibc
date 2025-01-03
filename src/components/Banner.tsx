@@ -1,10 +1,12 @@
 import { Box } from "@mui/material";
 
 const Banner = () => {
+  const imageBasePath = import.meta.env.BASE_URL;
+  const imageUrl = `${imageBasePath}logos/main.svg`;
   return (
     <Box
       sx={{
-        backgroundImage: 'url("/logos/main.svg")',
+        backgroundImage: `url(${imageUrl})`,
         backgroundRepeat: "no-repeat", // Prevents repetition
         // backgroundSize: "cover", // Ensures the image covers the container
         backgroundPosition: "center", // Centers the image

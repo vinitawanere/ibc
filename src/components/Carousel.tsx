@@ -42,6 +42,7 @@ export default function Carousel({
   }, []);
 
   const currentItem = galleryItems[currentIndex];
+  const imageBasePath = import.meta.env.BASE_URL;
 
   return (
     <>
@@ -98,7 +99,7 @@ export default function Carousel({
             {currentItem.type === "image" ? (
               <CardMedia
                 component="img"
-                image={currentItem.src}
+                image={`${imageBasePath}${currentItem.src}`}
                 alt={currentItem.alt}
                 sx={{
                   maxWidth: "100%",
@@ -158,7 +159,7 @@ export default function Carousel({
           {currentItem.type === "image" ? (
             <CardMedia
               component="img"
-              image={currentItem.src}
+              image={`${imageBasePath}${currentItem.src}`}
               alt={currentItem.alt}
               sx={{ maxWidth: "100%", maxHeight: "100%", objectFit: "contain" }}
             />

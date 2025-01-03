@@ -21,6 +21,11 @@ const ContactButtons = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.userEmail)) {
+      alert("Please enter a valid email address");
+      return;
+    }
+
     const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
     const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
     const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
@@ -115,8 +120,19 @@ const ContactButtons = () => {
             name="userEmail"
             id="userEmail"
             value={formData.userEmail}
+            type="email"
             onChange={handleChange}
             required
+            error={
+              !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.userEmail) &&
+              formData.userEmail !== ""
+            }
+            helperText={
+              !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.userEmail) &&
+              formData.userEmail !== ""
+                ? "Please enter a valid email address"
+                : ""
+            }
           />
           <TextField
             fullWidth

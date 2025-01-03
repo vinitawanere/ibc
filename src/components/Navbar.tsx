@@ -18,19 +18,21 @@ const Navbar = () => {
     }
   })();
 
+  const imageBasePath = import.meta.env.BASE_URL;
+
   return (
     <nav className="navbar">
       {!isHomePage && (
         <div className="navbar-logo">
           <Link to="/home">
-            <img src="/logos/fav.svg" alt="Logo" />
+            <img src={`${imageBasePath}logos/fav.svg`} alt="Logo" />
           </Link>
         </div>
       )}
       <ul className="navbar-menu">
         {menuItems.map((item, index) => (
           <li key={index}>
-            <a href={item.link}>{item.label}</a>
+            <Link to={item.link}>{item.label}</Link>
           </li>
         ))}
       </ul>

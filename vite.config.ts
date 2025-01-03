@@ -4,7 +4,7 @@ import { defineConfig } from 'vite'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/ibc/', // Replace with the actual name of your GitHub repo
+  base: '/',
   build: {
     outDir: 'dist',
   },

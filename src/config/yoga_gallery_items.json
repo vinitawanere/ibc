@@ -1,12 +1,12 @@
 [
     {
       "type": "image",
-      "src": "/yoga_gallery/yoga1.jpg",
+      "src": "yoga_gallery/yoga1.jpg",
       "alt": "Yoga Pose 1"
     },
     {
       "type": "image",
-      "src": "/yoga_gallery/yoga2.jpg",
+      "src": "yoga_gallery/yoga2.jpg",
       "alt": "Yoga Pose 2"
     }
   ]

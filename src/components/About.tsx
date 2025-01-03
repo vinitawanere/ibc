@@ -6,6 +6,7 @@ interface AboutProps {
   description: string;
 }
 const About: React.FC<AboutProps> = ({ imagePath, title, description }) => {
+  const imageBasePath = import.meta.env.BASE_URL;
   return (
     <Card
       sx={{
@@ -19,7 +20,7 @@ const About: React.FC<AboutProps> = ({ imagePath, title, description }) => {
     >
       <CardMedia
         component="img"
-        image={imagePath}
+        image={`${imageBasePath}${imagePath}`}
         alt={title}
         sx={{
           width: "100%", // Make the image take up the full width
