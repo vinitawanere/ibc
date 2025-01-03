@@ -13,6 +13,10 @@
     "deploy": "vite build && npm run copy-404 && gh-pages -d dist",
     "deploy-only": "gh-pages -d dist"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vinitawanere/ibc.git"
+  },
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
