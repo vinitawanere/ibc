@@ -51,9 +51,7 @@ export default function Carousel({
           Yoga Training
         </Typography>
         <Typography variant="body1" gutterBottom>
-          Welcome to our Yoga Training program. Our expert instructors are here
-          to guide you through a transformative journey of physical and mental
-          well-being.
+          Welcome to our Yoga.
         </Typography>
       </Box>
 
