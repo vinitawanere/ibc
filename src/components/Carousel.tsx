@@ -51,7 +51,7 @@ export default function Carousel({
           Yoga Training
         </Typography>
         <Typography variant="body1" gutterBottom>
-          Welcome to our Yoga.
+        Welcome to our Yoga Training program, where we offer a holistic approach to mastering the art of yoga. Whether you're a beginner or an experienced practitioner, our classes are designed to deepen your practice, enhance your knowledge, and empower you to teach with confidence. With expert guidance, personalized instruction, and a supportive community, you'll gain the tools needed to unlock your potential both on and off the mat. Join us and embark on a transformative journey to balance, strength, and mindfulness.
         </Typography>
       </Box>
 
